@@ -29,13 +29,13 @@ public class LocationController {
 	@GetMapping("/locations")
 	public String getStates(Model model) {		
 		
-		//List<State> stateList = stateService.getStates();	
+		List<State> stateList = stateService.getStates();	
 		List<Country> countryList = countryService.getCountries();
 		List<Location> locationList = locationService.getLocations();
 		
 		model.addAttribute("countries", countryList);
 		model.addAttribute("locations", locationList);	
-		//model.addAttribute("states", stateList);
+		model.addAttribute("states", stateList);
 		return "location";
 	}	
 	
