@@ -1,22 +1,21 @@
 /**
  * 
  */
-
 $('document').ready(function() {
 	
-	$('.table #editButton').on('click',function(event){		
+	console.log("loaded")
+	$('table #editButton').on('click',function(event){		
 		event.preventDefault();		
 		var href= $(this).attr('href');		
 		$.get(href, function(state, status){
 			$('#idEdit').val(state.id);
-			$('#ddlCountryEdit').val(state.countryid);
-			$('#capitalEdit').val(state.capipal);
-			$('#codeEdit').val(state.code);
+			$('#CountryEdit').val(state.countryid);
 			$('#nameEdit').val(state.name);
 			$('#detailsEdit').val(state.details);
 		});			
 		$('#editModal').modal();		
 	});
+	
 	
 	$('.table #detailsButton').on('click',function(event) {
 		event.preventDefault();		
@@ -25,9 +24,11 @@ $('document').ready(function() {
 			$('#idDetails').val(state.id);
 			$('#ddlCountryDetails').val(state.countryid);			
 			$('#nameDetails').val(state.name);
+			$('#capitalDetails').val(state.capital);
+			$('#codeDetails').val(state.code);
 			$('#detailsDetails').val(state.details);
 			$('#lastModifiedByDetails').val(state.lastModifiedBy);
-			//$('#lastModifiedDateDetails').val(state.lastModifiedDate.substr(0,19).replace("T", " "));
+			$('#lastModifiedDateDetails').val(state.lastModifiedDate.substr(0,19).replace("T", " "));
 		});			
 		$('#detailsModal').modal();		
 	});	
