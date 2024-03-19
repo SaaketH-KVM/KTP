@@ -65,5 +65,6 @@ public abstract class Auditable<U> {
 		this.lastModifiedDate = lastModifiedDate;
 	}
 
-    
+   
+	
 }

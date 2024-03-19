@@ -32,7 +32,7 @@ $('document').ready(function(){
 		
 		var href= $(this).attr('href');
 		
-		$('#confirmDeleteButton').attr('href', href);
+		$('#delRef2').attr('href', href);
 		
 		$('#deleteModal').modal();
 	});
